@@ -45,7 +45,7 @@ echo '</div>';
 echo '</div>';
 echo '</div>';
 echo '</section>';
-echo '<div class="bg-gray text-center pt-3 pb-3 pl-5 pr-5">';
+echo '<div class="bg-black text-center pt-3 pb-3 pl-5 pr-5">';
     echo '<div class="d-flex justify-content-center align-items-center">';
         echo '<a href="https://insideoutcreative.io/" target="_blank" rel="noopener noreferrer" style="" class="">';
         echo '<img src="https://insideoutcreative.io/wp-content/uploads/2022/04/created-by-inside-out-creative.png" style="width:150px;" class="h-auto ml-2" alt="">';
