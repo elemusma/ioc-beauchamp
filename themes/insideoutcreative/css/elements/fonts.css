@@ -6,7 +6,10 @@
   color: white;
 }
 
-.text-accent,
+.text-accent {
+  color: var(--accent-primary) !important;
+}
+
 a {
   color: var(--accent-primary);
 }
@@ -57,20 +60,41 @@ a.text-black:hover {
 
 html,
 body {
-  font-family: "proxima_novaregular";
+  font-family: proxima-nova, sans-serif;
+  font-weight: 400;
+}
+
+h2 {
+  font-weight: 400;
 }
 
 .light {
-  font-family: "proxima_nova_altlight";
+  font-weight: 100;
 }
 
 .thin {
-  font-family: "proxima_novathin";
+  font-weight: 300;
+}
+
+.regular {
+  font-weight: 400;
+}
+
+.medium {
+  font-weight: 500;
+}
+
+.semibold {
+  font-weight: 600;
 }
 
 .bold,
 strong {
-  font-family: "proxima_novabold";
+  font-weight: 800;
+}
+
+h1 {
+  font-size: 3rem;
 }
 
 .arrows li {
@@ -104,6 +128,14 @@ blockquote {
 .cormorant-garamond.bold {
   font-family: cormorant-garamond, serif;
 }
+
+.adobe-hebrew {
+  font-family: adobe-hebrew, sans-serif;
+}
+
+/* 
+font-family: adobe-hebrew, sans-serif;
+*/
 
 /* 
 font-family: cormorant-garamond, serif; 
