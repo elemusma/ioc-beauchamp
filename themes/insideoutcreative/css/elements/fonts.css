@@ -1,3 +1,4 @@
+.text-white,
 .text-white * {
   color: white;
 }
@@ -132,6 +133,16 @@ blockquote {
 .adobe-hebrew {
   font-family: adobe-hebrew, sans-serif;
 }
+
+.minion-pro {
+  font-family: minion-pro-caption, serif;
+
+}
+
+/* 
+font-family: minion-pro-caption, serif; 
+*/
+
 
 /* 
 font-family: adobe-hebrew, sans-serif;

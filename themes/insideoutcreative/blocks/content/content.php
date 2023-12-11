@@ -6,7 +6,7 @@ echo get_template_part('partials/bg-img');
 
 echo get_field('code_block');
 
-echo '<div class="container-fluid">';
+echo '<div class="container">';
 
 echo '<div class="row justify-content-center">';
 

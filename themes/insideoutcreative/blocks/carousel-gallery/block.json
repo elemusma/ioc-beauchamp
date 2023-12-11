@@ -1,0 +1,19 @@
+{
+    "name": "acf/carousel-gallery",
+    "title": "Carousel Gallery",
+    "description": "A custom content block.",
+    "style": [
+        "file:./carousel-gallery.css"
+    ],
+    "category": "formatting",
+    "icon": "admin-customizer",
+    "keywords": [
+        "content",
+        "quote"
+    ],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "carousel-gallery.php"
+    },
+    "align": "full"
+}

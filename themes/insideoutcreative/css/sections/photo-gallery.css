@@ -46,7 +46,35 @@ button.owl-prev {
 
 .owl-prev span,
 .owl-next span {
-  font-size: 4rem;
+  font-size: 8rem;
+}
+
+button.owl-prev,
+button.owl-next {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  color: white !important;
+  /* z-index:10; */
+}
+
+button.owl-prev {
+  left: 0;
+}
+
+button.owl-next {
+  right: 0;
+}
+
+.owl-dots {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+}
+
+.owl-theme .owl-dots .owl-dot span {
+  width: 100px !important;
+  height: 2px !important;
 }
 
 /* for background galleries */
