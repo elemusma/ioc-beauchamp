@@ -8,12 +8,20 @@ function register_acf_blocks() {
     // register_block_type( __DIR__ . '/blocks/about' );
     register_block_type( __DIR__ . '/blocks/content-image' );
     register_block_type( __DIR__ . '/blocks/carousel-gallery' );
+    register_block_type( __DIR__ . '/blocks/big-image' );
+    register_block_type( __DIR__ . '/blocks/slides' );
     // register_block_type( __DIR__ . '/blocks/popup' );
     // register_block_type( __DIR__ . '/blocks/gallery' );
     // register_block_type( __DIR__ . '/blocks/testimonials' );
     // register_block_type( __DIR__ . '/blocks/gallery-carousel' );
     // register_block_type( __DIR__ . '/blocks/tabs' );
 }
+
+// Add to functions.php in your theme
+// if (!defined('WP_POST_REVISIONS')) {
+//     define('WP_POST_REVISIONS', false);
+// }
+
 
 function beauchamp_stylesheets() {
 wp_enqueue_style('style', get_stylesheet_uri() );

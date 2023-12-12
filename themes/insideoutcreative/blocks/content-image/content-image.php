@@ -8,7 +8,7 @@ echo get_field('code_block');
 
 echo '<div class="container">';
 
-echo '<div class="row justify-content-center">';
+echo '<div class="row justify-content-center ' . get_field('row_classes') . '" style="' . get_field('row_style') . '">';
 
 echo '<div class="col-lg-6 ' . get_field('column_classes') . '" style="' . get_field('column_style') . '">';
 
@@ -17,7 +17,7 @@ echo '<div data-aos="fade-up">';
 echo '</div>';
 echo '</div>';
 
-echo '<div class="col-lg-6">';
+echo '<div class="col-lg-6 ' . get_field('image_column_classes') . '" style="' . get_field('image_column_style') . '">';
 
     echo get_template_part('partials/block-img');
 
