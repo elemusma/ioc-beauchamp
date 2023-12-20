@@ -2,7 +2,7 @@
 
 if(have_rows('sections')): while(have_rows('sections')): the_row();
 
-echo '<section class="position-relative d-flex align-items-center justify-content-center ' . get_field('classes') . '" style="min-height:75vh;' . get_field('style') . '" id="' . get_field('id') . '">';
+echo '<section class="position-relative d-flex align-items-center justify-content-center ' . get_sub_field('classes') . '" style="min-height:75vh;' . get_sub_field('style') . '" id="' . get_sub_field('id') . '">';
 
 echo get_template_part('partials/bg-img');
 

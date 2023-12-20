@@ -19,13 +19,7 @@ input.gform_button.button:hover {
 }
 
 .gform_footer.top_label {
-  margin-bottom: -90px !important;
-}
-
-input,
-textarea {
-  box-shadow: inset 1px 1px 8px #eaeaea !important;
-  border: none;
+  margin-bottom: -40px !important;
 }
 
 input[type=file] {
@@ -37,7 +31,7 @@ input[type=file] {
 /* custom form */
 input,
 textarea {
-  width: 100%;
+  width: 100% !important;
   border: 1px solid #eaeaea;
   box-shadow: inset 1px 1px 5px rgba(0, 0, 0, .5);
   padding: 5px 15px;

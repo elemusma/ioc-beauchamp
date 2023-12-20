@@ -1,6 +1,7 @@
 :root {
   --accent-primary: #e8ad1d;
   --accent-secondary: #211d1b;
+  --accent-tertiary: #2b322a;
 }
 
 html {
@@ -38,6 +39,14 @@ a.bg-accent:hover {
 }
 
 a.bg-accent-secondary:hover {
+  background: var(--accent-primary);
+}
+
+.bg-accent-tertiary {
+  background: var(--accent-tertiary);
+}
+
+a.bg-accent-tertiary:hover {
   background: var(--accent-primary);
 }
 
