@@ -1,3 +1,5 @@
+// alert('hello');
+
 // START OF FADE IN ANIMATIONS
 isInViewport = function (elem) {
     distance = elem.getBoundingClientRect();
@@ -57,12 +59,21 @@ window.addEventListener('scroll', function () {
     for (i = 0; i < fullHeight.length; i++) {
 
         id = fullHeight[i].getAttribute('id');
-        anchor = document.querySelector('#anchor-' + id);
         // console.log(id);
+        // console.log('ID above');
+        anchor = document.querySelector('#anchor-' + id);
+        // console.log(anchor);
+        // console.log('anchor above');
+        // console.log(fullHeight[i]);
 
         if (isAtTop(fullHeight[i])) {
             fullHeight[i].classList.add('active');
+            console.log(fullHeight[i]);
         }
+
+        // console.log(fullHeight[i]);
+        // console.log('fullHeight[i] above');
+
         if (isNotAtTop(fullHeight[i])) {
             fullHeight[i].classList.remove('active');
         }

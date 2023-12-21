@@ -2,7 +2,11 @@
 
 if(have_rows('sections')): while(have_rows('sections')): the_row();
 
-echo '<section class="position-relative d-flex align-items-center justify-content-center ' . get_sub_field('classes') . '" style="min-height:75vh;' . get_sub_field('style') . '" id="' . get_sub_field('id') . '">';
+$label = get_sub_field('label');
+$section = sanitize_title_with_dashes($label);
+$rowIndex=get_row_index();
+
+echo '<section class="position-relative d-flex align-items-center justify-content-center full-height ' . get_sub_field('classes') . '" style="min-height:75vh;' . get_sub_field('style') . '" id="section-' . $section . '">';
 
 echo get_template_part('partials/bg-img');
 
@@ -28,6 +32,35 @@ echo '</section>';
 
 endwhile; endif;
 
+// start of labels
+if(have_rows('sections')):
+echo '<div class="position-fixed side-navbar" style="top:25%;right:25px;transform:translate(0, 50%);z-index:2;">';
+echo '<ul class="list-unstyled text-right mr-md-4 mr-0">';
+
+while(have_rows('sections')): the_row();
+$label = get_sub_field('label');
+$section = sanitize_title_with_dashes($label);
+$rowIndex=get_row_index();
+// if($rowIndex == '1'){}
+
+echo '<li id="anchor-section-' . $section . '" class="mt-2 mb-2 position-relative">';
+
+echo '<a href="#section-' . $section . '" class="pl-md-5 pl-2 pr-2 text-white position-relative h5">';
+
+echo $label;
+
+echo '</a>';
+
+echo '</li>';
+
+endwhile;
+
+echo '</ul>';
+
+echo '</div>';
+
+endif;
+// end of labels
 
 // start of old slides
 

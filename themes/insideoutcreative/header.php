@@ -23,7 +23,7 @@ wp_head();
 if(get_field('body','options')) { the_field('body','options'); }
 if(get_field('body_code')) { the_field('body_code'); }
 echo '<div class="blank-space"></div>';
-echo '<header class="position-relative z-3 box-shadow bg-black w-100" style="top:0;left:0;padding:25px 0px;">';
+echo '<header class="position-relative z-3 box-shadow bg-black w-100" style="top:0;left:0;padding:0px 0px;">';
 
 echo '<div class="nav">';
 echo '<div class="container">';
@@ -44,7 +44,7 @@ $logo = get_field('logo','options');
 if($logo){
 echo wp_get_attachment_image($logo['id'],'full',"",[
     'class'=>'h-auto',
-    'style'=>'width:145px;max-width:100%;transition:all 1s ease-in-out;',
+    'style'=>'width:75px;max-width:100%;transition:all 1s ease-in-out;',
     'id'=>'logo-main'
 ]);
 

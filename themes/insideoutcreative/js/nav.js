@@ -16,11 +16,11 @@ function parallaxEffect() {
     header.classList.add('position-fixed');
     header.classList.remove('position-relative');
 
-    if (scrollY < 299) {
-        logoMain.style.width = "145px"
-    } else if (scrollY > 300) {
-        logoMain.style.width = "95px"
-    }
+    // if (scrollY < 299) {
+    //     logoMain.style.width = "145px"
+    // } else if (scrollY > 300) {
+    //     logoMain.style.width = "95px"
+    // }
 }
 
 // closes menu on menu item clicked, for anchor links
