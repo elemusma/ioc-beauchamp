@@ -1,5 +1,3 @@
-// alert('hello');
-
 // START OF FADE IN ANIMATIONS
 isInViewport = function (elem) {
     distance = elem.getBoundingClientRect();
@@ -15,20 +13,20 @@ isInViewport = function (elem) {
 isAtTop = function (elem) {
     bounding = elem.getBoundingClientRect();
     return (
-        bounding.top <= 0
+        bounding.top <= 200
     );
 };
 isNotAtTop = function (elem) {
     bounding = elem.getBoundingClientRect();
     return (
-        bounding.top >= 0
+        bounding.top >= 200
     );
 };
 
 isActive = function (elem) {
     bounding = elem.getBoundingClientRect();
     return (
-        bounding.bottom <= 0
+        bounding.bottom <= 200
     );
 };
 
@@ -54,9 +52,15 @@ isAnchorActive = function (elem) {
 
 let scrollLength = window.scrollY;
 window.addEventListener('scroll', function () {
+
+    console.log(isAtTop(document.querySelector('#section-our-land')));
+    console.log(window.scrollY);
+
     // fadeRight animation
     let fullHeight = document.querySelectorAll('.full-height');
     for (i = 0; i < fullHeight.length; i++) {
+
+        // console.log(fullHeight[0]);
 
         id = fullHeight[i].getAttribute('id');
         // console.log(id);
@@ -66,9 +70,13 @@ window.addEventListener('scroll', function () {
         // console.log('anchor above');
         // console.log(fullHeight[i]);
 
+        // if (this.window.scrollY <= 110) {
+        //     fullHeight[0].classList.add('active');
+        // }
+
         if (isAtTop(fullHeight[i])) {
             fullHeight[i].classList.add('active');
-            console.log(fullHeight[i]);
+            // console.log(fullHeight[i]);
         }
 
         // console.log(fullHeight[i]);
@@ -80,6 +88,7 @@ window.addEventListener('scroll', function () {
         if (isActive(fullHeight[i])) {
             fullHeight[i].classList.remove('active');
         }
+
         if (isAnchorAtTop(fullHeight[i])) {
             anchor.classList.add('active');
         }

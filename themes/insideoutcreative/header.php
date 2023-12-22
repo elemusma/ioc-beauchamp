@@ -22,21 +22,26 @@ wp_head();
 <?php
 if(get_field('body','options')) { the_field('body','options'); }
 if(get_field('body_code')) { the_field('body_code'); }
-echo '<div class="blank-space"></div>';
-echo '<header class="position-relative z-3 box-shadow bg-black w-100" style="top:0;left:0;padding:0px 0px;">';
+
+// if(!is_page(81)){
+    echo '<div class="blank-space"></div>';
+// }
+
+
+echo '<header class="position-relative z-3 box-shadow bg-black w-100" style="top:0;left:0;padding:10px 0px;">';
 
 echo '<div class="nav">';
 echo '<div class="container">';
 echo '<div class="row align-items-center justify-content-center">';
 
-echo '<div class="col-lg-4 col-6 text-center">';
+echo '<div class="col-lg-4 col-6 text-center mobile-hidden">';
 wp_nav_menu(array(
     'menu' => 'Menu Left',
     'menu_class'=>'menu list-unstyled mb-0 d-flex justify-content-end'
     )); 
 echo '</div>';
 
-echo '<div class="col-lg-3 col-6 text-center">';
+echo '<div class="col-lg-2 col-6 text-center">';
 echo '<a href="' . home_url() . '">';
 
 $logo = get_field('logo','options');
@@ -53,7 +58,7 @@ echo wp_get_attachment_image($logo['id'],'full',"",[
 echo '</a>';
 echo '</div>';
 
-echo '<div class="col-lg-4 col-6 text-center">';
+echo '<div class="col-lg-4 col-6 text-center mobile-hidden">';
 wp_nav_menu(array(
     'menu' => 'Menu Right',
     'menu_class'=>'menu list-unstyled mb-0 d-flex justify-content-start'
@@ -71,27 +76,48 @@ echo '</a>';
 echo '</div>';
 
 echo '<div id="navMenuOverlay" class="position-fixed z-2"></div>';
-echo '<div class="col-lg-4 col-md-8 col-11 nav-items bg-white desktop-hidden" id="navItems">';
+echo '<div class="col-lg-4 col-md-8 col-11 nav-items bg-black text-white desktop-hidden" id="navItems">';
 
-echo '<div class="pt-5 pb-5">';
+echo '<div class="position-relative w-100 h-100" style="min-height:200px;">';
+
+echo '<div class="" style="padding:50px 9px;">';
 echo '<div class="close-menu">';
 echo '<div>';
 echo '<span id="navMenuClose" class="close h2 text-gray" style="float:right;">X</span>';
 echo '</div>';
 echo '</div>';
-echo '<a href="' . home_url() . '">';
+echo '<a href="' . home_url() . '" title="Go back home">';
 
 $logo = get_field('logo','options'); 
 if($logo){
-echo wp_get_attachment_image($logo['id'],'full',"",['class'=>'w-100 h-auto','style'=>'max-width:250px;']);
+echo wp_get_attachment_image($logo['id'],'full',"",[
+    'class'=>'w-100 h-auto',
+    'style'=>'max-width:150px;'
+]);
 }
 
 echo '</a>';
 echo '</div>';
+
 wp_nav_menu(array(
-'menu' => 'primary',
+'menu' => 'Menu Left',
 'menu_class'=>'menu list-unstyled mb-0'
 )); 
+
+wp_nav_menu(array(
+    'menu' => 'Menu Right',
+    'menu_class'=>'menu list-unstyled mb-0'
+    )); 
+
+echo '<div class="position-absolute w-100" style="bottom:0;left:0px;">';
+echo get_template_part('partials/si');
+
+echo get_field('website_message','options');
+echo '</div>';
+
+
+echo '</div>';
+
 echo '</div>'; // end of col for navigation
 
 

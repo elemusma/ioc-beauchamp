@@ -1,7 +1,7 @@
 <?php
 echo '<footer>';
 
-echo '<section class="pt-5" style="background:#211d1b;padding:50px 0px;">';
+echo '<section class="" style="background:#211d1b;padding:50px 0px;">';
 echo '<div class="container">';
 echo '<div class="row justify-content-center">';
 echo '<div class="col-md-5 text-center pb-5">';

@@ -4,7 +4,7 @@ let navMenuToggle = document.querySelector('#navToggle');
 let navMenuOverlay = document.querySelector('#navMenuOverlay');
 let navMenuClose = document.querySelector('#navMenuClose');
 let header = document.querySelector('header');
-let blankSpace = document.querySelector('.blank-space');
+// let blankSpace = document.querySelector('.blank-space');
 
 let logoMain = document.querySelector('#logo-main')
 let logoSecondary = document.querySelector('#logo-secondary')
@@ -12,7 +12,7 @@ let logoSecondary = document.querySelector('#logo-secondary')
 window.addEventListener("scroll", parallaxEffect);
 
 function parallaxEffect() {
-    blankSpace.style.height = header.offsetHeight + "px";
+    // blankSpace.style.height = header.offsetHeight + "px";
     header.classList.add('position-fixed');
     header.classList.remove('position-relative');
 

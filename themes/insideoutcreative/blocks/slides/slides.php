@@ -1,32 +1,54 @@
 <?php
 
-if(have_rows('sections')): while(have_rows('sections')): the_row();
-
+if(have_rows('sections')): 
+    $sectionsCounter = 0;
+    while(have_rows('sections')): the_row();
+$sectionsCounter++;
 $label = get_sub_field('label');
 $section = sanitize_title_with_dashes($label);
 $rowIndex=get_row_index();
 
-echo '<section class="position-relative d-flex align-items-center justify-content-center full-height ' . get_sub_field('classes') . '" style="min-height:75vh;' . get_sub_field('style') . '" id="section-' . $section . '">';
+
+if($sectionsCounter == 1) {
+    echo '<section class="position-relative d-flex align-items-center justify-content-center full-height active ' . get_sub_field('classes') . '" style="min-height:400px;height:88vh;padding: 100px 0;' . get_sub_field('style') . '" id="section-' . $section . '">';
+    // echo '</section>';
+} else {
+    echo '<section class="position-relative d-flex align-items-center justify-content-center full-height ' . get_sub_field('classes') . '" style="min-height:400px;height:88vh;padding: 100px 0;' . get_sub_field('style') . '" id="section-' . $section . '">';
+}
 
 echo get_template_part('partials/bg-img');
 
 echo get_sub_field('code_block');
 
+echo '<div class="position-relative w-100">';
+
+echo '<div class="w-100 h-100 position-absolute slides-show-on-active" style="top:0;left:0;background:rgba(0,0,0,.35);opacity:0;"></div>';
+
 echo '<div class="container w-100">';
+
 
 echo '<div class="row justify-content-center ' . get_sub_field('row_classes') . '" style="' . get_sub_field('row_style') . '">';
 
-echo '<div class="col-lg-9 text-center pb-4 ' . get_sub_field('column_classes') . '" style="' . get_sub_field('column_style') . '">';
+echo '<div class="col-lg-9 text-center ' . get_sub_field('column_classes') . '" style="padding-bottom: 25px;' . get_sub_field('column_style') . '">';
+
+echo '<div class="slides-show-on-active bg-accent w-100 position-absolute" style="height:15px;left:0;top:-30px;opacity:0;"></div>';
+
 echo '<div data-aos="fade-up">';
 
     echo get_sub_field('content');
 
-echo '</div>';
-echo '</div>';
+echo '</div>'; // end of data aos
+
+echo '<div class="slides-show-on-active bg-accent w-100 position-absolute" style="height:15px;left:0;bottom:-30px;opacity:0;"></div>';
 
 echo '</div>';
 
 echo '</div>';
+
+echo '</div>'; // end of container
+
+echo '</div>';
+
 
 echo '</section>';
 
@@ -36,16 +58,22 @@ endwhile; endif;
 if(have_rows('sections')):
 echo '<div class="position-fixed side-navbar" style="top:25%;right:25px;transform:translate(0, 50%);z-index:2;">';
 echo '<ul class="list-unstyled text-right mr-md-4 mr-0">';
-
+$sectionsCounter = 0;
 while(have_rows('sections')): the_row();
+$sectionsCounter++;
+
 $label = get_sub_field('label');
 $section = sanitize_title_with_dashes($label);
 $rowIndex=get_row_index();
 // if($rowIndex == '1'){}
 
-echo '<li id="anchor-section-' . $section . '" class="mt-2 mb-2 position-relative">';
-
-echo '<a href="#section-' . $section . '" class="pl-md-5 pl-2 pr-2 text-white position-relative h5">';
+if($sectionsCounter == 1) {
+echo '<li id="anchor-section-' . $section . '" class="mt-2 mb-2 position-relative active">';
+// echo '</li>';
+} else {
+    echo '<li id="anchor-section-' . $section . '" class="mt-2 mb-2 position-relative">';
+}
+echo '<a href="#section-' . $section . '" class="pl-md-5 pl-2 pr-2 text-white position-relative h5 slides-link" style="text-decoration:none;padding: 0 20px;">';
 
 echo $label;
 

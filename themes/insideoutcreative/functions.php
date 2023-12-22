@@ -95,6 +95,10 @@ function beauchamp_stylesheets_footer() {
     // general
 	wp_enqueue_script('nav-js', get_theme_file_uri('/js/nav.js'));
 	wp_enqueue_script('popup-js', get_theme_file_uri('/js/popup.js'));
+
+	// if(!is_page(81)) {
+		wp_enqueue_script('blank-space-js', get_theme_file_uri('/js/blank-space.js'));
+	// }
 	
 	if(is_single()){
 		wp_enqueue_script('blog-js', get_theme_file_uri('/js/blog.js'));
