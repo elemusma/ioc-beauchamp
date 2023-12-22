@@ -12,7 +12,7 @@ $socialLink_url = $socialLink['url'];
 $socialLink_title = $socialLink['title'];
 $socialLink_target = $socialLink['target'] ? $socialLink['target'] : '_self';
 
-echo '<a href="' . $socialLink_url . '" target="' . $socialLink_target . '" style="text-decoration:none;" class="si-icon-link">';
+echo '<a href="' . $socialLink_url . '" target="' . $socialLink_target . '" style="text-decoration:none;" title="Visit the following link: ' . $socialLink_url . '" class="si-icon-link">';
 
 if($svgOrImg == 'SVG') {
 

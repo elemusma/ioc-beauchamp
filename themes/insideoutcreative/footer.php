@@ -47,8 +47,8 @@ echo '</div>';
 echo '</div>';
 
 echo '<div class="col-lg-3 text-right text-white">';
-echo '<a href="https://insideoutcreative.io/" target="_blank" rel="noopener noreferrer" style="" class="">';
-echo '<img src="https://insideoutcreative.io/wp-content/uploads/2022/04/created-by-inside-out-creative.png" style="width:150px;" class="h-auto ml-2" alt="">';
+echo '<a href="https://insideoutcreative.io/" target="_blank" rel="noopener noreferrer" style="" class="" title="This website was built by Inside Out Creative, visit their website.">';
+echo '<img src="https://insideoutcreative.io/wp-content/uploads/2022/04/created-by-inside-out-creative.png" style="width:150px;" class="h-auto ml-2" alt="Website design and development done by Inside Out Creative.">';
 // echo '<img src="https://insideoutcreative.io/wp-content/uploads/2022/06/created-by-inside-out-creative-black.png" style="width:150px;" class="h-auto ml-2" alt="">';
 echo '</a>';
 echo '</div>';
