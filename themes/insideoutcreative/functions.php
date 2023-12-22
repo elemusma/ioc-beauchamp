@@ -59,8 +59,9 @@ wp_enqueue_style('fonts', get_theme_file_uri('/css/elements/fonts.css'));
 wp_enqueue_style('proxima-nova', get_theme_file_uri('/proxima-nova/proxima-nova.css'));
 wp_enqueue_style('blair-itc', get_theme_file_uri('/blair-itc/blair-itc.css'));
 wp_enqueue_style('aspira', get_theme_file_uri('/aspira-font/aspira-font.css'));
+wp_enqueue_style('yeseva', get_theme_file_uri('/font-yeseva/font-yeseva.css'));
 // wp_enqueue_style('coromant-garamond', '//use.typekit.net/fqe2slt.css');
-wp_enqueue_style('hebrew', '//use.typekit.net/btc2sfa.css');
+// wp_enqueue_style('hebrew', '//use.typekit.net/btc2sfa.css');
 
 }
 add_action('wp_enqueue_scripts', 'beauchamp_stylesheets');

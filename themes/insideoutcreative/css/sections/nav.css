@@ -48,7 +48,7 @@ ul.menu>li>a {
 .current_page_parent>.current-menu-item>a,
 .current-page-ancestor>a,
 #menu-main-menu .current_page_ancestor .current_page_item>a {
-    text-decoration: underline;
+    text-decoration: underline !important;
 }
 
 .free-gift a {

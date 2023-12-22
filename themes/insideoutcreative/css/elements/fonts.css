@@ -128,7 +128,7 @@ blockquote {
   font-size: 90%;
 }
 
-.cormorant-garamond {
+/* .cormorant-garamond {
   font-family: cormorant-garamond, serif;
 }
 
@@ -138,11 +138,11 @@ blockquote {
 
 .adobe-hebrew {
   font-family: adobe-hebrew, sans-serif;
-}
+} */
 
 .minion-pro {
-  font-family: minion-pro-caption, serif;
-
+  /* font-family: minion-pro-caption, serif; */
+  font-family: 'yeseva_oneregular';
 }
 
 /* 
