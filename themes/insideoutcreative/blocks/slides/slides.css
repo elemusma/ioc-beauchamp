@@ -11,6 +11,10 @@
     opacity: 1 !important;
 }
 
+.active .li-border-label {
+    background: var(--accent-primary);
+}
+
 @media only screen and (max-width:767px) {
     .side-navbar {
         top: unset !important;

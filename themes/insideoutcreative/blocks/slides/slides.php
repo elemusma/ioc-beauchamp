@@ -56,7 +56,7 @@ endwhile; endif;
 
 // start of labels
 if(have_rows('sections')):
-echo '<div class="position-fixed side-navbar" style="top:25%;right:25px;transform:translate(0, 50%);z-index:2;">';
+echo '<div class="position-fixed side-navbar" style="top:45%;right:25px;transform:translate(0, 50%);z-index:2;">';
 echo '<ul class="list-unstyled text-right mr-md-4 mr-0">';
 $sectionsCounter = 0;
 while(have_rows('sections')): the_row();
@@ -68,16 +68,18 @@ $rowIndex=get_row_index();
 // if($rowIndex == '1'){}
 
 if($sectionsCounter == 1) {
-echo '<li id="anchor-section-' . $section . '" class="mt-2 mb-2 position-relative active">';
+echo '<li id="anchor-section-' . $section . '" class="position-relative text-left active" style="margin-top:10px;margin-bottom:10px;">';
 // echo '</li>';
 } else {
-    echo '<li id="anchor-section-' . $section . '" class="mt-2 mb-2 position-relative">';
+    echo '<li id="anchor-section-' . $section . '" class="position-relative text-left" style="margin-top:10px;margin-bottom:10px;">';
 }
-echo '<a href="#section-' . $section . '" class="pl-md-5 pl-2 pr-2 text-white position-relative h5 slides-link" style="text-decoration:none;padding: 0 20px;">';
+echo '<a href="#section-' . $section . '" class="pl-md-5 pl-2 pr-2 text-white position-relative h5 slides-link" style="text-decoration:none;padding: 10px 20px;display:inline-block;">';
 
 echo $label;
 
 echo '</a>';
+
+echo '<div class="bg-white h-100 position-absolute li-border-label" style="top:0;right:0;width:4px;"></div>';
 
 echo '</li>';
 
